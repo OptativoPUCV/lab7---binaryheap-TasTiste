@@ -50,9 +50,9 @@ void heap_push(Heap* pq, void* data, int priority){
       aux = pq->heapArray[posicion];
       pq->heapArray[posicion]  = pq->heapArray[padre];
       pq->heapArray[padre] = aux;
+      posicion = padre;
+      padre = (posicion-1)/2;
     }
-    posicion = padre;
-    padre = (posicion-1)/2;
   }
   pq->size++;
 }
