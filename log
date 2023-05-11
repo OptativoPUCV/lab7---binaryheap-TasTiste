@@ -55,3 +55,14 @@ Thu 11 May 2023 04:54:33 PM UTC:
  tests:  2|2
 total_score: 20/70
 287b910
+Thu 11 May 2023 05:14:38 PM UTC: 
+ heap.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:52:9: error: unused variable ‘padre’ [-Werror=unused-variable]
+   52 |     int padre = trunc(posicion-1)/2;
+      |         ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+3dee99b
