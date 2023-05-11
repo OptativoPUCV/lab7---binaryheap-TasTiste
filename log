@@ -2,3 +2,21 @@ Thu 11 May 2023 04:26:36 PM UTC:
  tests:  0|4
 total_score: 0/70
 2e3f818
+Thu 11 May 2023 04:39:45 PM UTC: 
+ heap.c | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:21:7: error: unused variable ‘mayorPrioridad’ [-Werror=unused-variable]
+   21 | Heap *mayorPrioridad;
+      |       ^~~~~~~~~~~~~~
+heap.c:23:1: error: control reaches end of non-void function [-Werror=return-type]
+   23 | }
+      | ^
+heap.c: In function ‘createHeap’:
+heap.c:42:1: error: control reaches end of non-void function [-Werror=return-type]
+   42 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+3967278
