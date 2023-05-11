@@ -105,3 +105,14 @@ heap.c:52:9: error: unused variable ‘padre’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 86bec38
+Thu 11 May 2023 05:19:50 PM UTC: 
+ heap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:54:9: error: unused variable ‘padre’ [-Werror=unused-variable]
+   54 |     int padre = (posicion-1)/2;
+      |         ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+02d477f
