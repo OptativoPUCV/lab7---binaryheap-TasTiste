@@ -58,9 +58,13 @@ void heap_push(Heap* pq, void* data, int priority){
 }
 
 
-void heap_pop(Heap* pq){
-  int pMax = 0;
-  pq->heapArray[pMax] = pq->heapArray[pq->size];
+void heap_pop(Heap* pq)
+{
+  int pos = 0;
+  int hijoIzq = 2*pos+1;
+  int hijoDer = 2*pos+2;
+  heapElem aux;
+  pq->heapArray[0] = pq->heapArray[pq->size];
 }
 
 Heap* createHeap(){

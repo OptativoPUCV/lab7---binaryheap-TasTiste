@@ -152,3 +152,20 @@ Thu 11 May 2023 05:29:22 PM UTC:
  tests:  7|1
 total_score: 45/70
 25e7f87
+Thu 11 May 2023 05:31:20 PM UTC: 
+ heap.c | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:66:12: error: unused variable ‘aux’ [-Werror=unused-variable]
+   66 |   heapElem aux;
+      |            ^~~
+heap.c:65:7: error: unused variable ‘hijoDer’ [-Werror=unused-variable]
+   65 |   int hijoDer = 2*pos+2;
+      |       ^~~~~~~
+heap.c:64:7: error: unused variable ‘hijoIzq’ [-Werror=unused-variable]
+   64 |   int hijoIzq = 2*pos+1;
+      |       ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+31af955
