@@ -60,18 +60,32 @@ void heap_push(Heap* pq, void* data, int priority){
 
 void heap_pop(Heap* pq)
 {
-  int pos = 0;
-  int hijoIzq = 2*pos+1;
-  int hijoDer = 2*pos+2;
-  heapElem aux;
-  pq->heapArray[0] = pq->heapArray[pq->size];
-}
-
-Heap* createHeap(){
-  Heap *nuevo;
-  nuevo = malloc(3 * sizeof(Heap));
-  nuevo->heapArray = malloc(3 * sizeof(Heap));
-  nuevo->size = 0;
-  nuevo->capac = 3;
-  return nuevo;
+  if (pq->size == 0)
+        return;
+    pq->heapArray[0] = pq->heapArray[pq->size - 1];
+    pq->size--;
+    int posicion = 0;
+    while (1)
+    {
+        int hijoIzq = 2 * posicion + 1;
+        int hijoDer = 2 * posicion + 2;
+        if (hijoIzq >= pq->size && hijoDer >= pq->size)
+            break;
+        heapElem aux;
+        int hijoMayor = hijoIzq;
+        if (hijoDer < pq->size && pq->heapArray[hijoDer].priority >             pq->heapArray[hijoIzq].priority)
+            hijoMayor = hijoDer;
+        if (pq->heapArray[hijoMayor].priority > 
+            pq->heapArray[posicion].priority)
+        {
+            aux = pq->heapArray[hijoMayor];
+            pq->heapArray[hijoMayor] = pq->heapArray[posicion];
+            pq->heapArray[posicion] = aux;
+            posicion = hijoMayor;
+        }
+        else
+        {
+            break;
+        }
+    }
 }

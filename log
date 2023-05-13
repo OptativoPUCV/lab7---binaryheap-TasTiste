@@ -169,3 +169,11 @@ heap.c:64:7: error: unused variable ‘hijoIzq’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 31af955
+Sat 13 May 2023 11:27:42 PM UTC: 
+ heap.c | 38 ++++++++++++++++++++++++++------------
+ 1 file changed, 26 insertions(+), 12 deletions(-)
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/cc91iMn7.o: in function `test_create':
+test.c:(.text+0x296): undefined reference to `createHeap'
+collect2: error: ld returned 1 exit status
+Compilation failed
+d36f5bf
