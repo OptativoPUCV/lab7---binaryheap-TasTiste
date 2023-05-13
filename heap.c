@@ -89,3 +89,14 @@ void heap_pop(Heap* pq)
         }
     }
 }
+
+Heap* createHeap()
+{
+  Heap *new; 
+  new = malloc(3 * sizeof(Heap));
+  new->heapArray = malloc(3 * sizeof(Heap));
+  new->size = 0; 
+  new->capac = 3;
+
+  return new;
+}

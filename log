@@ -177,3 +177,9 @@ test.c:(.text+0x296): undefined reference to `createHeap'
 collect2: error: ld returned 1 exit status
 Compilation failed
 d36f5bf
+Sat 13 May 2023 11:28:42 PM UTC: 
+ heap.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+ tests:  8|0
+total_score: 70/70
+6d7a264
